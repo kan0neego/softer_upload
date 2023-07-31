@@ -1,0 +1,9 @@
+export type InformationDisk = { max_file_size: number; paid_max_file_size: number; total_space: number; reg_time: string; trash_size: number; is_paid: boolean; used_space: number; system_folders: { odnoklassniki: string; google: string; instagram: string; vkontakte: string; attach: string; mailru: string; downloads: string; applications: string; facebook: string; social: string; messenger: string; calendar: string; scans: string; screenshots: string; photostream: string; }; user: { reg_time: string; display_name: string; uid: string; country: string; is_child: boolean; login: string; }; unlimited_autoupload_enabled: boolean; revision: number; status: string; };
+export type QueryFileParams = { limit?: number; media_type?: MediaType; offset?: number; fields?: string; preview_size?: PreviewSize; preview_crop?: false | true; };
+export type File = { antivirus_status?: string; public_key?: string; public_url?: string; name: string; exif?: object; created?: string; size: number; resource_id?: string; modified?: string; comment_ids?: { private_resource?: string; public_resource?: string; }; mime_type: string; file?: string; path?: string; media_type?: string; sha256?: string; type?: string; md5?: string; revision?: number; };
+export type DownloadURL = { href: string; method: string; operation_id: string; templated: boolean; };
+export type Sort = "name" | "path" | "created" | "modified" | "size";
+export type MediaType = | "audio" | "backup" | "book" | "compressed" | "data" | "development" | "diskimage" | "document" | "encoded" | "executable" | "flash" | "font" | "image" | "settings" | "spreadsheet" | "text" | "unknown" | "video" | "web";
+export type PreviewSize = "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
+export type FileItems = { items: File[] };
+export type ApiError = { status: number, statusText: string, message: text};
