@@ -8,6 +8,7 @@ export default function UploadDragger() {
     <Dragger
       name="file"
       multiple={true}
+      showUploadList={false}
       action={handleAction}
       onChange={handleChange}
       style={{ padding: 20 }}
