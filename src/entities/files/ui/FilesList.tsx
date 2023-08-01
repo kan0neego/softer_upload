@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-import { useAppSelector } from "@/app/store/hooks";
 import { List } from "antd";
+import { useAppSelector } from "@/app/store/hooks";
 import style from "./filesList.module.scss";
 
 export default function FilesList() {
-  const selectItems = useAppSelector((state) => state.files.items);
+  const items = useAppSelector((state) => state.files.items);
+
   return (
     <>
-      {selectItems.length ? (
+      {items.length ? (
         <div className={style.filesListWrapper}>
           <List
             style={{ width: 950 }}
             itemLayout="horizontal"
-            dataSource={selectItems}
+            dataSource={items}
             renderItem={(item) => (
               <List.Item actions={[]}>
                 <List.Item.Meta

@@ -14,6 +14,7 @@ export const useUploadActions = () => {
 
   const handleChange = (e: UploadChangeParam<UploadFile<any>>) => {
     const file = e.file;
+    console.log(file.percent)
     if (file.status === "done") {
       const { name, type, size } = file;
       dispatch(addFile({ name, type, size }));

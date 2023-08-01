@@ -4,6 +4,7 @@ const { Dragger } = Upload;
 
 export default function UploadDragger() {
   const { handleAction, handleChange } = useUploadActions();
+
   return (
     <Dragger
       name="file"
