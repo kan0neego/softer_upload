@@ -9,21 +9,19 @@ export default function FilesList() {
   return (
     <>
       <div className={style.filesListWrapper}>
-        {items.length ? (
-          <List
-            style={{ width: 950 }}
-            itemLayout="horizontal"
-            dataSource={items}
-            renderItem={(item) => (
-              <List.Item actions={[]}>
-                <List.Item.Meta
-                  title={<Link to={`/files/${item.path}`}>{item.name}</Link>}
-                  description={item.media_type}
-                />
-              </List.Item>
-            )}
-          />
-        ) : null}
+        <List
+          style={{ width: 950 }}
+          itemLayout="horizontal"
+          dataSource={items}
+          renderItem={(item) => (
+            <List.Item actions={[]}>
+              <List.Item.Meta
+                title={<Link to={`/files/${item.path}`}>{item.name}</Link>}
+                description={item.media_type}
+              />
+            </List.Item>
+          )}
+        />
       </div>
     </>
   );
