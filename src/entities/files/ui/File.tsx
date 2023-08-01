@@ -1,9 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 
-type Props = {};
-
-export default function File({}: Props) {
+export default function File() {
   const file = useLoaderData();
-  console.log(file);
-  return <div>File</div>;
+  return <span>{JSON.stringify(file)}</span>;
 }

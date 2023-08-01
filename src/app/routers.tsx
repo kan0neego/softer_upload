@@ -9,6 +9,7 @@ import { filesUpdated } from "@/entities/files/model/filesSlice";
 const Disk = lazy(() => import("@/pages/Disk").then(module => ({ default: module.Disk })))
 const Files = lazy(() => import("@/pages/Files").then(module => ({ default: module.Files })))
 const File = lazy(() => import("@/entities/files").then(module => ({ default: module.File })))
+const Upload = lazy(() => import("@/pages/Upload").then(module => ({ default: module.Upload })))
 
 const routers = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const routers = createBrowserRouter([
       const result = await getDiskInformation();
       return result.data;
     },
+  },
+  {
+    path: "/upload",
+    element: <Upload />,
   },
   {
     path: "/files",

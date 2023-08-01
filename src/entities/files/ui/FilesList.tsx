@@ -8,8 +8,8 @@ export default function FilesList() {
 
   return (
     <>
-      {items.length ? (
-        <div className={style.filesListWrapper}>
+      <div className={style.filesListWrapper}>
+        {items.length ? (
           <List
             style={{ width: 950 }}
             itemLayout="horizontal"
@@ -23,8 +23,8 @@ export default function FilesList() {
               </List.Item>
             )}
           />
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </>
   );
 }

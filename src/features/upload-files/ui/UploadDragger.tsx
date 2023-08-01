@@ -9,9 +9,10 @@ export default function UploadDragger() {
     <Dragger
       name="file"
       multiple={true}
-      showUploadList={false}
+      showUploadList={{ showRemoveIcon: false }}
       action={handleAction}
       onChange={handleChange}
+      onPreview={(e) => window.open(`/files/disk:/${e.name}`, "_blank", "noreferrer")}
       style={{ padding: 20 }}
     >
       <p className="ant-upload-text">
